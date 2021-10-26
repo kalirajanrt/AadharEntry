@@ -1,12 +1,13 @@
+//age dropdown iteration
 var ageId = document.getElementById("age_id");
 var ageOp=null;
 
 for(let i=1; i<=100; i++){
     ageOp += "<option>"+i+"</option>";
 }
-
 ageId.innerHTML = ageOp;
 
+//datatable functions
 $(document).ready(function(){
   $('#result_table_id').DataTable(
     {
@@ -22,7 +23,10 @@ $(document).ready(function(){
     })
 })
 
-var del = `<i style="padding-right:100px" class="fas fa-trash-alt"></i>`; 
+//delete icon
+var del = `<i style="padding-right:100px" id="delete_icon" class="fas fa-trash-alt"></i>`; 
+
+//submit 
 $(document).on("submit", function(e){
   e.preventDefault();
   var name = document.getElementById("name").value;
@@ -30,7 +34,7 @@ $(document).on("submit", function(e){
   var gender = document.getElementById("gender_id").value;
   var state = document.getElementById("state_id").value;
   var city = document.getElementById("city_id").value;
-  alert(name+" "+age +" "+ gender+" "+state +" "+city);
+  // alert(name+" "+age +" "+ gender+" "+state +" "+city);
 
   // var datalist= ` <div class="row-parent">
   //                 <div class="inline" id="name">`+name+`</div>
@@ -59,4 +63,8 @@ $(document).on("submit", function(e){
 
 
 
-
+//delete
+$(document).on('click', 'i#delete_icon', function () {
+  // alert();
+  $(this).parent().parent().remove();
+} );
