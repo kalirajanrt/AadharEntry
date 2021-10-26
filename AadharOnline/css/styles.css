@@ -1,0 +1,35 @@
+.aadhar_input_div{
+    background-color :azure;
+}
+h1{
+    text-align:center;
+    color: darkblue;
+}
+label {
+    padding-right: 50px;
+}
+input{
+    width: 191px; 
+    height: 25px;
+}
+select {
+    width: 200px; 
+    height: 30px;
+}
+.aadhar_input_form{
+    padding-left: 400px;
+}
+
+.aadhar_results h2{   
+    text-align:center;
+    color: darkblue;
+}
+.aadhar_results i{
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.inline{
+    display: inline-block; 
+}
